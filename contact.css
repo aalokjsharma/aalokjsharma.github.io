@@ -1,0 +1,45 @@
+/* Body Styling */
+body {
+    background-image: url(bg.jpg);
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the background image fixed during scrolling */
+    color: aliceblue; /* Light text color for better contrast */
+    background-color: black; /* Fallback color in case the background image fails to load */
+    text-align: center; /* Centers the text */
+    margin: 0; /* Ensures there's no default margin */
+    padding: 0; /* Ensures there's no default padding */
+    height: 100vh; /* Ensures the body takes up full viewport height */
+}
+
+/* Mobile and Tablet adjustments */
+@media (max-width: 768px) {
+    /* Disables fixed background on smaller screens for better performance */
+    body {
+        background-attachment: scroll; 
+    }
+
+    /* Centered text, but with adjusted font size for smaller devices */
+    body {
+        font-size: 16px; /* Ensures readability on smaller screens */
+    }
+
+    /* Optional: Adjust the background size to be more adaptive for smaller devices */
+    body {
+        background-size: contain; /* Ensures background image fits in the viewport */
+        background-position: center center; /* Center the background image */
+    }
+}
+
+/* Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    /* Center text and make it more readable on small devices */
+    body {
+        font-size: 14px; /* Further decrease the font size on smaller screens */
+    }
+
+    /* Additional mobile optimization */
+    body {
+        padding: 10px; /* Adds some padding to ensure content doesn't touch the edges */
+    }
+}

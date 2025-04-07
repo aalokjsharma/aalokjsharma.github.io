@@ -1,0 +1,44 @@
+/* Body Styling */
+body {
+    background-image: url(bg.jpg);
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the background image fixed during scrolling */
+    color: aliceblue; /* Light text color for better contrast */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    height: 100vh; /* Full height of the viewport */
+}
+
+/* Image Styling */
+img {
+    width: 100%; /* Make the image responsive to the container's width */
+    max-width: 700px; /* Set a maximum width for the image */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures the image is displayed as a block element */
+    margin: 20px auto; /* Center the image and add some spacing around it */
+}
+
+/* Media Query for Tablets (≤ 768px) */
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll; /* Disable fixed background on smaller devices for better performance */
+    }
+
+    img {
+        width: 90%; /* Allow the image to take up 90% of the screen width */
+        max-width: 600px; /* Set a smaller max-width for tablet devices */
+    }
+}
+
+/* Media Query for Mobile (≤ 480px) */
+@media (max-width: 480px) {
+    body {
+        background-attachment: scroll; /* Disable fixed background on mobile for performance */
+    }
+
+    img {
+        width: 100%; /* Image takes up the full width of the screen */
+        max-width: 400px; /* Set a smaller max-width for mobile devices */
+    }
+}
